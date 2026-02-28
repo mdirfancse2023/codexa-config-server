@@ -1,0 +1,16 @@
+server:
+  port: 9050
+  servlet.context-path: /account
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:9002/codexa-account-db
+    username: user
+    password: password
+    driver-class-name: org.postgresql.Driver
+
+stripe:
+  api:
+    secret: sk_test_51SltV4P1hPMwbn4lE4vG5n7eJiS12AkvQQmQow0VfixlTZ0FF13X63US20YMGHoms7M0CH69J65F6QOJIYB4OYfs005emSqrem
+  webhook:
+    secret: whsec_bafbaac88849d767f21645ddc69863b9e129f8cf735249bb1fe4bc4bf48b1a50
