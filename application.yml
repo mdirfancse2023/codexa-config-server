@@ -19,7 +19,9 @@ eureka:
     prefer-ip-address: true
     hostname: localhost
 
-jwt.secret: Q9xA2fM7KpZ4Yt3LrW8B0S1N6HVaEeCJD8zP4TUm
+jwt:
+  secret: Q9xA2fM7KpZ4Yt3LrW8B0S1N6HVaEeCJD8zP4TUm
+  expiration: 3600
 
 app:
   frontend:
