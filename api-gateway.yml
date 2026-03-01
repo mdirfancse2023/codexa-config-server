@@ -5,9 +5,23 @@ spring:
   cloud:
     gateway.server.webflux:
       routes:
-        - id: account-serviceUrl
+        - id: account-service
           uri: lb://account-service
           predicates:
             - Path=/api/v1/account/**
           filters:
             - StripPrefix=2
+
+        - id: workspace-service
+          uri: lb://workspace-service
+          predicates:
+            - Path=/api/v1/workspace/**
+          filters:
+            - StripPrefix=2  
+
+        - id: intelligence-service
+          uri: lb://intelligence-service
+          predicates:
+            - Path=/api/v1/intelligence/**
+          filters:
+            - StripPrefix=2      
