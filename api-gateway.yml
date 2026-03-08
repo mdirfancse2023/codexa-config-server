@@ -8,7 +8,7 @@ app:
       - "/api/v1/account/auth/signup" 
       - "/api/v1/account/webhooks/**" 
       - "/api/v1/workspace/public/**"
-      - "/api/v1/intelligence/**"   
+      - "/api/v1/intelligence/chat/stream"   
 
 spring:
   cloud:
