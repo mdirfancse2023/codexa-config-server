@@ -40,3 +40,8 @@ jwt:
 app:
   frontend:
     url: http://localhost:8080/frontend
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+    org.springframework.web: DEBUG    
