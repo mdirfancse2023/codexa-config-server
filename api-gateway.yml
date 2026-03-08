@@ -32,4 +32,4 @@ spring:
           predicates:
             - Path=/api/v1/intelligence/**
           filters:
-            - StripPrefix=3     
+            - StripPrefix=2     
