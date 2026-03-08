@@ -30,6 +30,7 @@ eureka:
     fetch-registry: true
   instance:
     prefer-ip-address: true
+    ip-address: 172.20.10.5
     hostname: localhost
 
 jwt:
