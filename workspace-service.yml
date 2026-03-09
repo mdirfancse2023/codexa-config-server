@@ -11,10 +11,34 @@ spring:
   data:
     redis:
       host: localhost
-      port: 6380
+      port: 6379
 
 minio:
   url: http://localhost:9000
   access-key: minioadmin
   secret-key: minioadmin123
   project-bucket: projects
+
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: k8s
+  datasource:
+    url: jdbc:postgresql://pgvector.codexa-ai.svc.cluster.local:5432/workspace_db
+    username: workspace_user
+    password: ${DB_PASSWORD}
+  data:
+    redis:
+      host: redis
+      port: 6379  
+
+minio:
+  url: http://minio.codexa-ai.svc.cluster.local:9000
+  access-key: ${MINIO_ROOT_USER}
+  secret-key: ${MINIO_ROOT_PASSWORD}
+  project-bucket: projects       
+    
+
