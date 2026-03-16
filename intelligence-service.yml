@@ -32,8 +32,8 @@ spring:
 
   autoconfigure:
     exclude:
-      #- org.springframework.ai.model.openai.autoconfigure.OpenAiChatAutoConfiguration
-      - org.springframework.ai.model.ollama.autoconfigure.OllamaChatAutoConfiguration    
+      - org.springframework.ai.model.openai.autoconfigure.OpenAiChatAutoConfiguration
+      #- org.springframework.ai.model.ollama.autoconfigure.OllamaChatAutoConfiguration    
 
 ---
 
@@ -53,3 +53,10 @@ spring:
         options:
           model:  google/gemini-3-flash-preview 
           temperature: 0.0  
+
+    ollama:
+      base-url: http://ollama.codexa-ai.svc.cluster.local:11434
+      chat:
+        options:
+          model: deepseek-v3.1:671b-cloud
+          temperature: 0.0      
