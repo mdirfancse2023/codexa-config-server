@@ -40,5 +40,27 @@ minio:
   access-key: ${MINIO_ROOT_USER}
   secret-key: ${MINIO_ROOT_PASSWORD}
   project-bucket: projects       
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: render
+  datasource:
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+  data:
+    redis:
+      host: ${SPRING_DATA_REDIS_HOST}
+      port: ${SPRING_DATA_REDIS_PORT}
+minio:
+  url: ${MINIO_URL}
+  access-key: ${MINIO_ACCESS_KEY}
+  secret-key: ${MINIO_SECRET_KEY}
+  project-bucket: ${MINIO_PROJECT_BUCKET}
+
+  
     
 
