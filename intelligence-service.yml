@@ -60,3 +60,24 @@ spring:
         options:
           model: deepseek-v3.1:671b-cloud
           temperature: 0.0      
+
+---
+spring:
+  config:
+    activate:
+      on-profile: render
+  datasource:
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      base-url: https://openrouter.ai/api
+      chat:
+        options:
+          model: google/gemini-3-flash-preview
+          temperature: 0.0
+  autoconfigure:
+    exclude:
+      - org.springframework.ai.model.ollama.autoconfigure.OllamaChatAutoConfiguration         
